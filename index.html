@@ -2,6 +2,23 @@
 <html>
 <head>
   <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-box">
+    <h2>Calculator</h2>
+    <input type="text" id="num1" placeholder="Enter first number">
+    <select id="operator">
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
+    <input type="text" id="num2" placeholder="Enter second number">
+    <button onclick="calculate()">Calculate</button>
+    <h3 id="result">Result: </h3>
+  </div>
+
   <script>
     function calculate() {
       let a = parseFloat(document.getElementById("num1").value);
@@ -18,15 +35,5 @@
       document.getElementById("result").innerText = "Result: " + result;
     }
   </script>
-</head>
-<body>
-  <h2>Calculator</h2>
-  <input type="text" id="num1" placeholder="Enter first number">
-  <select id="operator">
-    <option>+</option><option>-</option><option>*</option><option>/</option>
-  </select>
-  <input type="text" id="num2" placeholder="Enter second number">
-  <button onclick="calculate()">Calculate</button>
-  <h3 id="result"></h3>
 </body>
 </html>
