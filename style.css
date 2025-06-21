@@ -11,62 +11,55 @@ body {
 
 .calculator-box {
   background: #ffffff;
-  padding: 40px;
+  padding: 30px 20px;
   border-radius: 20px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-  width: 90%;
-  max-width: 400px;
+  width: 320px;
   text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-.calculator-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 25px;
-  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-input, select {
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
+#display {
+  width: 90%;
+  height: 50px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  margin: 8px 5px;
-  width: calc(50% - 20px);
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.3s;
+  text-align: right;
 }
 
-input:focus, select:focus {
-  border-color: #007bff;
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
-button {
-  padding: 12px 20px;
-  background: #007bff;
+.keypad button {
+  padding: 20px;
+  font-size: 18px;
   border: none;
+  background-color: #007bff;
   color: white;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 15px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-button:hover {
-  background: #0056b3;
+.keypad button:hover {
+  background-color: #0056b3;
 }
 
-#result {
-  font-size: 20px;
-  color: #444;
-  margin-top: 20px;
-  font-weight: bold;
+.keypad .clear {
+  grid-column: span 4;
+  background-color: #dc3545;
 }
+
+.keypad .clear:hover {
+  background-color: #a72834;
+}
+
